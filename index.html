@@ -39,48 +39,80 @@
     <script type="text/javascript" src="/JS/main.js" defer></script>
   </head>
 
-  <body>
-    <h1 class="my-3 text-center">Trenitalboolean</h1>
+  <body class="bg-danger">
+    <header class="bg-white py-2">
+      <h1 class="my-3 text-center text-success">Trenitalboolean</h1>
+    </header>
     <div class="container">
-      <div class="row">
+      <div class="row py-3 border-bottom border-white">
         <!-- USERNAME -->
-        <div class="">
-          <label for="username" class="form-label">Nome utente</label>
-          <input type="text" class="w-25 form-control" id="username" required />
+        <div class="col-12 col-lg-4">
+          <div class="card p-3 my-2 bg-white">
+            <label for="username" class="form-label h5">Nome utente</label>
+            <input
+              type="text"
+              class="form-control border-success"
+              id="username"
+              required
+            />
+          </div>
         </div>
 
         <!-- ROUTE LENGTH -->
-        <div class="">
-          <label for="routeLength" class="form-label"
-            >Distanza desiderata (km)</label
-          >
-          <input
-            type="text"
-            class="w-25 form-control"
-            id="routeLength"
-            required
-          />
+        <div class="col-12 col-lg-4">
+          <div class="card p-3 my-2 bg-white">
+            <label for="routeLength" class="form-label h5"
+              >Distanza desiderata (km)</label
+            >
+            <input
+              type="text"
+              class="form-control border-success"
+              id="routeLength"
+              required
+            />
+          </div>
         </div>
 
         <!-- USER AGE -->
-        <div class="mb-2">
-          <label for="userAge" class="form-label">Età Utente</label>
-          <input class="w-25 form-control" id="userAge" required />
+        <div class="mb-2 col-12 col-lg-4">
+          <div class="card p-3 my-2 bg-white">
+            <label for="userAge" class="form-label h5">Età Utente</label>
+            <input class="form-control border-success" id="userAge" required />
+          </div>
         </div>
 
-        <!-- SUBMIT BUTTON -->
-        <button type="button" class="btn btn-primary" id="submitData">
-          Invia
-        </button>
+        <div class="my-2">
+          <!-- SUBMIT BUTTON -->
+          <button type="button" class="btn btn-primary" id="submitData">
+            Invia
+          </button>
 
-        <!-- RESET BUTTON -->
-        <button type="reset" class="btn btn-warning">Reset</button>
+          <!-- RESET BUTTON -->
+          <button type="reset" class="btn btn-warning">Reset</button>
+        </div>
       </div>
-      <div id="ticket">
-        <h5>Nome</h5>
-        <h5>Offerta</h5>
-        <h5>Carrozza n.o</h5>
-        <h5>Costo finale</h5>
+      <div id="ticket" class="card my-3">
+        <header class="h4 border-bottom border-success p-3">
+          Biglietto Trenitalboolean
+        </header>
+        <div class="row p-3">
+          <div class="col-12 col-lg-3 py-2">
+            <div class="card border-success py-2 px-1"><h5>Nome:</h5></div>
+          </div>
+          <div class="col-12 col-lg-3 py-2">
+            <div class="card border-success py-2 px-1"><h5>Tariffa:</h5></div>
+          </div>
+          <div class="col-12 col-lg-3 py-2">
+            <div class="card border-success py-2 px-1">
+              <h5>Carrozza:</h5>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3 py-2">
+            <div class="card border-success py-2 px-1">
+              <h5>Prezzo:</h5>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
