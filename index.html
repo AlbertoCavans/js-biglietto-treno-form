@@ -40,51 +40,48 @@
   </head>
 
   <body>
-    <h1 class="my-3">Treniboolean</h1>
-    <form action="">
-      <!-- USERNAME -->
-      <div class="">
-        <label for="username" class="form-label">Nome utente</label>
-        <input
-          type="text"
-          class="form-control w-25"
-          id="username"
-          aria-describedby="username"
-          required
-        />
+    <h1 class="my-3 text-center">Trenitalboolean</h1>
+    <div class="container">
+      <div class="row">
+        <!-- USERNAME -->
+        <div class="">
+          <label for="username" class="form-label">Nome utente</label>
+          <input type="text" class="w-25 form-control" id="username" required />
+        </div>
+
+        <!-- ROUTE LENGTH -->
+        <div class="">
+          <label for="routeLength" class="form-label"
+            >Distanza desiderata (km)</label
+          >
+          <input
+            type="text"
+            class="w-25 form-control"
+            id="routeLength"
+            required
+          />
+        </div>
+
+        <!-- USER AGE -->
+        <div class="mb-2">
+          <label for="userAge" class="form-label">Età Utente</label>
+          <input class="w-25 form-control" id="userAge" required />
+        </div>
+
+        <!-- SUBMIT BUTTON -->
+        <button type="button" class="btn btn-primary" id="submitData">
+          Invia
+        </button>
+
+        <!-- RESET BUTTON -->
+        <button type="reset" class="btn btn-warning">Reset</button>
       </div>
-
-      <!-- ROUTE LENGTH -->
-      <div class="">
-        <label for="routeLength" class="form-label"
-          >Distanza desiderata (km)</label
-        >
-        <input
-          type="text"
-          class="form-control w-25"
-          id="routeLength"
-          aria-describedby="routeLength"
-          required
-        />
+      <div id="ticket">
+        <h5>Nome</h5>
+        <h5>Offerta</h5>
+        <h5>Carrozza n.o</h5>
+        <h5>Costo finale</h5>
       </div>
-
-      <!-- USER AGE -->
-      <div class="mb-2">
-        <label for="userAge" class="form-label">Età Utente</label>
-        <input
-          type="text"
-          class="form-control w-25"
-          id="userAge"
-          aria-describedby="userAge"
-          required
-        />
-      </div>
-
-      <!-- SUBMIT BUTTON -->
-      <button type="submit" class="btn btn-primary">Invia</button>
-
-      <!-- RESET BUTTON -->
-      <button type="reset" class="btn btn-warning">Reset</button>
-    </form>
+    </div>
   </body>
 </html>
