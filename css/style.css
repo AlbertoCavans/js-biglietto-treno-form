@@ -1,5 +1,4 @@
-/* SETTINGS-------------------------------------------------
-* {
+SETTINGS------------------------------------------------- * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -7,6 +6,7 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 img {
@@ -15,9 +15,15 @@ img {
 
 ul {
   list-style: none;
+  font-size: 2rem;
+  flex-direction: column;
+  display: flex;
+  margin: 30px 0;
+  padding: 0;
 }
 
 li {
+  font-size: 1.5rem;
   display: inline-block;
 }
 
@@ -26,8 +32,7 @@ a {
   text-decoration: none;
 }
 
-UTILS------------------------------------------------------
-.container {
+UTILS------------------------------------------------------ .container {
   max-width: 1080px;
   margin: 0 auto;
   padding: 0 15px;
@@ -39,13 +44,18 @@ UTILS------------------------------------------------------
   clear: both;
 }
 
-DEBUG---------------------------------------------------------
-
-
-.debug {
+DEBUG--------------------------------------------------------- .debug {
   min-height: 80px;
   background-color: lightgrey;
   padding: 2rem;
   border: 3px dashed red;
 }
- */
+
+h1 {
+  font-weight: 700;
+  font-size: 3.5rem;
+}
+
+footer {
+  width: 100vw;
+}
