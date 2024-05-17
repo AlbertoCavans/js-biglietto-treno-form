@@ -39,95 +39,131 @@
     <script type="text/javascript" src="./JS/main.js" defer></script>
   </head>
 
-  <body class="bg-danger">
-    <header class="bg-white py-2">
-      <h1 class="my-3 text-center text-success">Trenitalboolean</h1>
+  <body class="bg-white">
+    <header class="bg-success py-2">
+      <div class="container text-white d-flex justify-content-between">
+        <h1 class="my-3 text-center">Trenitalboolean</h1>
+        <nav>
+          <ul class="flex-row">
+            <li class="pe-4"><a href="h"></a>Home</li>
+            <li class="pe-4"><a href="h"></a>Treni</li>
+            <li class="pe-4"><a href="h"></a>Stazioni</li>
+            <li class="pe-4"><a href="h"></a>Promozioni</li>
+            <li class="pe-4"><a href="h"></a>Abbonamenti</li>
+          </ul>
+        </nav>
+      </div>
     </header>
-    <div class="container">
-      <div class="row py-3 border-bottom border-white">
-        <!-- USERNAME -->
-        <div class="col-12 col-lg-4">
-          <div class="card p-3 my-2 bg-white">
-            <label for="username" class="form-label h5">Nome utente</label>
-            <input
-              type="text"
-              class="form-control border-success"
-              id="username"
-              required
-            />
+    <main>
+      <div class="container py-5">
+        <!-- DATA FORM SECTION -->
+        <div class="row py-3 border-bottom border-white">
+          <!-- USERNAME -->
+          <div class="col-12 col-lg-4">
+            <div class="card p-3 my-2 bg-success">
+              <label for="username" class="form-label h5">Nome utente</label>
+              <input
+                type="text"
+                class="form-control border-white"
+                id="username"
+                required
+              />
+            </div>
           </div>
-        </div>
 
-        <!-- ROUTE LENGTH -->
-        <div class="col-12 col-lg-4">
-          <div class="card p-3 my-2 bg-white">
-            <label for="routeLength" class="form-label h5"
-              >Distanza desiderata (km)</label
+          <!-- ROUTE LENGTH -->
+          <div class="col-12 col-lg-4">
+            <div class="card p-3 my-2 bg-success">
+              <label for="routeLength" class="form-label h5"
+                >Distanza desiderata (km)</label
+              >
+              <input
+                type="text"
+                class="form-control border-white"
+                id="routeLength"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- USER AGE -->
+          <div class="mb-2 col-12 col-lg-4">
+            <div class="card p-3 my-2 bg-success">
+              <label for="userAge" class="form-label h5">Età Utente</label>
+              <input class="form-control border-white" id="userAge" required />
+            </div>
+          </div>
+
+          <div class="my-2">
+            <!-- SUBMIT BUTTON -->
+            <button
+              type="button"
+              class="btn btn-primary border-white"
+              id="submitData"
             >
-            <input
-              type="text"
-              class="form-control border-success"
-              id="routeLength"
-              required
-            />
+              Invia
+            </button>
+
+            <!-- RESET BUTTON -->
+            <button type="reset" class="btn btn-warning border-white">
+              Reset
+            </button>
           </div>
         </div>
 
-        <!-- USER AGE -->
-        <div class="mb-2 col-12 col-lg-4">
-          <div class="card p-3 my-2 bg-white">
-            <label for="userAge" class="form-label h5">Età Utente</label>
-            <input class="form-control border-success" id="userAge" required />
-          </div>
-        </div>
-
-        <div class="my-2">
-          <!-- SUBMIT BUTTON -->
-          <button
-            type="button"
-            class="btn btn-primary border-white"
-            id="submitData"
-          >
-            Invia
-          </button>
-
-          <!-- RESET BUTTON -->
-          <button type="reset" class="btn btn-warning border-white">
-            Reset
-          </button>
-        </div>
-      </div>
-      <div id="ticket" class="card my-3">
-        <header class="h4 border-bottom border-success p-3">
-          Biglietto Trenitalboolean
-        </header>
-        <div class="row p-3">
-          <div class="col-12 col-lg-3 py-2">
-            <div class="card border-success py-2 px-1">
-              <h5>Nome:</h5>
-              <h6 id="ticketUserName"></h6>
+        <!-- TICKET SECTION -->
+        <div id="ticket" class="card my-3 bg-success">
+          <header class="h4 border-bottom border-white p-3">
+            Biglietto Trenitalboolean
+          </header>
+          <div class="row p-3">
+            <div class="col-12 col-lg-3 py-2">
+              <div class="card border-success py-2 px-1">
+                <h5>Nome:</h5>
+                <h6 id="ticketUserName"></h6>
+              </div>
             </div>
-          </div>
-          <div class="col-12 col-lg-3 py-2">
-            <div class="card border-success py-2 px-1">
-              <h5>Tariffa:</h5>
-              <h6 id="ticketDiscount"></h6>
+            <div class="col-12 col-lg-3 py-2">
+              <div class="card border-success py-2 px-1">
+                <h5>Tariffa:</h5>
+                <h6 id="ticketDiscount"></h6>
+              </div>
             </div>
-          </div>
-          <div class="col-12 col-lg-3 py-2">
-            <div class="card border-success py-2 px-1">
-              <h5>Carrozza:</h5>
-              <h6 id="ticketCarriage"></h6>
+            <div class="col-12 col-lg-3 py-2">
+              <div class="card border-success py-2 px-1">
+                <h5>Carrozza:</h5>
+                <h6 id="ticketCarriage"></h6>
+              </div>
             </div>
-          </div>
-          <div class="col-12 col-lg-3 py-2">
-            <div class="card border-success py-2 px-1">
-              <h5>Prezzo:</h5>
-              <h6 id="ticketPrice"></h6>
+            <div class="col-12 col-lg-3 py-2">
+              <div class="card border-success py-2 px-1">
+                <h5>Prezzo:</h5>
+                <h6 id="ticketPrice"></h6>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </main>
+    <footer class="bg-danger text-white">
+      <div class="container d-flex justify-content-between">
+        <ul>
+          <strong>Navigazione ordinaria</strong>
+          <li><a href="#"> Home </a></li>
+          <li><a href="#"> Treni </a></li>
+          <li><a href="#"> Stazioni </a></li>
+          <li><a href="#"> Promozioni </a></li>
+          <li><a href="#"> Abbonamenti </a></li>
+        </ul>
+        <ul>
+          <strong>Link utili</strong>
+          <li><a href="#"> La nostra storia </a></li>
+          <li><a href="#"> Contattati </a></li>
+          <li><a href="#"> Lavora con noi </a></li>
+          <li><a href="#"> Progetti </a></li>
+          <li><a href="#"> Privacy </a></li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>
