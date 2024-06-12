@@ -22,7 +22,7 @@ submitData.addEventListener("click", function () {
 
   let discount;
   let discountText;
-  if (!isNaN(distance) && !isNaN(age)) {
+  if (passengerName && !isNaN(distance) && distance > 0 && !isNaN(age)) {
     /* Calculate discounts */
     /*!!!!! Underage discount */
     if (age < 18) {
@@ -50,7 +50,7 @@ submitData.addEventListener("click", function () {
     ticketLabelPrice.innerText = ticketPrice;
   } else {
     alert(
-      "Dati inseriti non corretti, inserire km con SOLO tasti numerici ed età SOLO con tasti numerici."
+      "Dati inseriti non corretti, inserire km con SOLO tasti numerici ed età SOLO con tasti numerici. Inoltre i Km devono essere maggiori di zero"
     );
   }
 });
