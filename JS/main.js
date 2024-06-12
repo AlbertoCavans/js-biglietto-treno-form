@@ -28,14 +28,14 @@ submitData.addEventListener("click", function () {
     if (age < 18) {
       discount = (priceOnlyByDistance / 100) * 20;
       discountText = "Under 18";
-    } else if (age > 65) {
+    } else if (age >= 65) {
       /*!!!!! NO discount */
       discount = (priceOnlyByDistance / 100) * 60;
-      discountText = "Adulto";
+      discountText = "Over65";
     } else if (age >= 18) {
       /*  !!!!! OVER65 discount */
       discount = (priceOnlyByDistance / 100) * 0;
-      discountText = "Over65";
+      discountText = "Adulto";
     }
 
     /* Final price */
